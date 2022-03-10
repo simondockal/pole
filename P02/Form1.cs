@@ -31,8 +31,15 @@ namespace P02
 
                 }
                 Array.Sort(pole);
-                int min = pole[1];
-                int max = pole[pole.Length-2];
+                //2,2,2,3,5,5,6,6
+                int min = pole[0];
+                int max = pole[pole.Length-1];
+                int pdmax = Array.IndexOf(pole, max);
+                int dmax = pole[pdmax - 1];
+                int pdmin = Array.LastIndexOf(pole, min);
+                int dmin = pole[pdmin + 1];
+                
+
 
                 if (radioButton2.Checked)
                 {
@@ -42,7 +49,7 @@ namespace P02
                 {
                     listBox1.Items.Add(pole[i].ToString());
                 }
-                label1.Text = "Druhý největší prvek je " + max + " a druhý nejmenší je " + min;
+                label1.Text = "Druhý největší prvek je " + dmax + " a druhý nejmenší je " + dmin;
             }
         }
     }
