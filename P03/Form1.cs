@@ -45,6 +45,17 @@ namespace P03
                 {
                     listBox3.Items.Add(polec[i]);
                 }
+                int[] poled = polea.Union(polem).ToArray();
+                for(int i=0;i<poled.Length;i++)
+                {
+                    listBox4.Items.Add(poled[i]);
+                }
+                int[] polee = polea.Intersect(polem).ToArray();
+                for(int i=0;i<polee.Length;i++)
+                {
+                    listBox5.Items.Add(polee[i]);
+                }
+                
             }
 
         
